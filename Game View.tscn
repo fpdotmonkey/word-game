@@ -1,500 +1,571 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://bpjok8dpnegnv"]
 
-[ext_resource path="res://resources/boggle.tres" type="Theme" id=1]
-[ext_resource path="res://resources/cmunbsr.tres" type="DynamicFont" id=2]
-[ext_resource path="res://resources/tile_font.tres" type="DynamicFont" id=3]
+[ext_resource type="Theme" uid="uid://uq86cmg3my4h" path="res://resources/boggle.tres" id="1"]
+[ext_resource type="FontFile" uid="uid://6dg4chnht8l4" path="res://resources/cmunbsr.tres" id="2"]
 
-[sub_resource type="Theme" id=1]
-RichTextLabel/fonts/normal_font = ExtResource( 2 )
+[sub_resource type="Theme" id="1"]
+RichTextLabel/fonts/normal_font = ExtResource("2")
 
 [node name="Game View" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( 1 )
+theme = ExtResource("1")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 750.0
-margin_bottom = 39.0
+layout_mode = 2
+offset_right = 750.0
+offset_bottom = 55.0
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_left = 296.0
-margin_right = 376.0
-margin_bottom = 39.0
+layout_mode = 2
+offset_left = 272.0
+offset_right = 377.0
+offset_bottom = 55.0
 text = "88888"
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_left = 380.0
-margin_right = 453.0
-margin_bottom = 39.0
+layout_mode = 2
+offset_left = 381.0
+offset_right = 477.0
+offset_bottom = 55.0
 text = "88:88"
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="VBoxContainer"]
-margin_top = 43.0
-margin_right = 750.0
-margin_bottom = 1291.0
+layout_mode = 2
+offset_top = 59.0
+offset_right = 750.0
+offset_bottom = 1275.0
 size_flags_vertical = 11
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/AspectRatioContainer"]
-margin_top = 249.0
-margin_right = 750.0
-margin_bottom = 999.0
-size_flags_vertical = 3
-custom_constants/vseparation = 0
-custom_constants/hseparation = 0
+layout_mode = 2
+offset_top = 233.0
+offset_right = 750.0
+offset_bottom = 983.0
 columns = 4
 
 [node name="Tile" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_right = 188.0
-margin_bottom = 188.0
+layout_mode = 2
+offset_right = 185.0
+offset_bottom = 185.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile"]
-margin_right = 188.0
-margin_bottom = 188.0
+layout_mode = 2
+offset_right = 185.0
+offset_bottom = 185.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile"]
-margin_right = 188.0
-margin_bottom = 188.0
+layout_mode = 2
+offset_right = 185.0
+offset_bottom = 185.0
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 44.0
+offset_top = 27.0
+offset_right = 141.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile2" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_left = 188.0
-margin_right = 376.0
-margin_bottom = 188.0
+layout_mode = 2
+offset_left = 189.0
+offset_right = 374.0
+offset_bottom = 185.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile2"]
-margin_right = 188.0
-margin_bottom = 188.0
+layout_mode = 2
+offset_right = 185.0
+offset_bottom = 185.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile2"]
-margin_right = 188.0
-margin_bottom = 188.0
+layout_mode = 2
+offset_right = 185.0
+offset_bottom = 185.0
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile2/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 44.0
+offset_top = 27.0
+offset_right = 141.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile3" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_left = 376.0
-margin_right = 563.0
-margin_bottom = 188.0
+layout_mode = 2
+offset_left = 378.0
+offset_right = 562.0
+offset_bottom = 185.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile3"]
-margin_top = 0.5
-margin_right = 187.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = 0.5
+offset_right = 184.0
+offset_bottom = 184.5
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile3"]
-margin_top = 0.5
-margin_right = 187.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = 0.5
+offset_right = 184.0
+offset_bottom = 184.5
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile3/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 43.0
+offset_top = 27.0
+offset_right = 140.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile4" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_left = 563.0
-margin_right = 750.0
-margin_bottom = 188.0
+layout_mode = 2
+offset_left = 566.0
+offset_right = 750.0
+offset_bottom = 185.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile4"]
-margin_top = 0.5
-margin_right = 187.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = 0.5
+offset_right = 184.0
+offset_bottom = 184.5
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile4"]
-margin_top = 0.5
-margin_right = 187.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = 0.5
+offset_right = 184.0
+offset_bottom = 184.5
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile4/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 43.0
+offset_top = 27.0
+offset_right = 140.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile5" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_top = 188.0
-margin_right = 188.0
-margin_bottom = 376.0
+layout_mode = 2
+offset_top = 189.0
+offset_right = 185.0
+offset_bottom = 374.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile5"]
-margin_right = 188.0
-margin_bottom = 188.0
+layout_mode = 2
+offset_right = 185.0
+offset_bottom = 185.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile5"]
-margin_right = 188.0
-margin_bottom = 188.0
+layout_mode = 2
+offset_right = 185.0
+offset_bottom = 185.0
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile5/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 44.0
+offset_top = 27.0
+offset_right = 141.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile6" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_left = 188.0
-margin_top = 188.0
-margin_right = 376.0
-margin_bottom = 376.0
+layout_mode = 2
+offset_left = 189.0
+offset_top = 189.0
+offset_right = 374.0
+offset_bottom = 374.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile6"]
-margin_right = 188.0
-margin_bottom = 188.0
+layout_mode = 2
+offset_right = 185.0
+offset_bottom = 185.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile6"]
-margin_right = 188.0
-margin_bottom = 188.0
+layout_mode = 2
+offset_right = 185.0
+offset_bottom = 185.0
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile6/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 44.0
+offset_top = 27.0
+offset_right = 141.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile7" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_left = 376.0
-margin_top = 188.0
-margin_right = 563.0
-margin_bottom = 376.0
+layout_mode = 2
+offset_left = 378.0
+offset_top = 189.0
+offset_right = 562.0
+offset_bottom = 374.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile7"]
-margin_top = 0.5
-margin_right = 187.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = 0.5
+offset_right = 184.0
+offset_bottom = 184.5
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile7"]
-margin_top = 0.5
-margin_right = 187.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = 0.5
+offset_right = 184.0
+offset_bottom = 184.5
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile7/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 43.0
+offset_top = 27.0
+offset_right = 140.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile8" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_left = 563.0
-margin_top = 188.0
-margin_right = 750.0
-margin_bottom = 376.0
+layout_mode = 2
+offset_left = 566.0
+offset_top = 189.0
+offset_right = 750.0
+offset_bottom = 374.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile8"]
-margin_top = 0.5
-margin_right = 187.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = 0.5
+offset_right = 184.0
+offset_bottom = 184.5
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile8"]
-margin_top = 0.5
-margin_right = 187.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = 0.5
+offset_right = 184.0
+offset_bottom = 184.5
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile8/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 43.0
+offset_top = 27.0
+offset_right = 140.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile9" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_top = 376.0
-margin_right = 188.0
-margin_bottom = 563.0
+layout_mode = 2
+offset_top = 378.0
+offset_right = 185.0
+offset_bottom = 562.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile9"]
-margin_top = -0.5
-margin_right = 188.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = -0.5
+offset_right = 185.0
+offset_bottom = 184.5
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile9"]
-margin_top = -0.5
-margin_right = 188.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = -0.5
+offset_right = 185.0
+offset_bottom = 184.5
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile9/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 44.0
+offset_top = 27.0
+offset_right = 141.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile10" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_left = 188.0
-margin_top = 376.0
-margin_right = 376.0
-margin_bottom = 563.0
+layout_mode = 2
+offset_left = 189.0
+offset_top = 378.0
+offset_right = 374.0
+offset_bottom = 562.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile10"]
-margin_top = -0.5
-margin_right = 188.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = -0.5
+offset_right = 185.0
+offset_bottom = 184.5
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile10"]
-margin_top = -0.5
-margin_right = 188.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = -0.5
+offset_right = 185.0
+offset_bottom = 184.5
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile10/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 44.0
+offset_top = 27.0
+offset_right = 141.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile11" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_left = 376.0
-margin_top = 376.0
-margin_right = 563.0
-margin_bottom = 563.0
+layout_mode = 2
+offset_left = 378.0
+offset_top = 378.0
+offset_right = 562.0
+offset_bottom = 562.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile11"]
-margin_right = 187.0
-margin_bottom = 187.0
+layout_mode = 2
+offset_right = 184.0
+offset_bottom = 184.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile11"]
-margin_right = 187.0
-margin_bottom = 187.0
+layout_mode = 2
+offset_right = 184.0
+offset_bottom = 184.0
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile11/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 43.0
+offset_top = 27.0
+offset_right = 140.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile12" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_left = 563.0
-margin_top = 376.0
-margin_right = 750.0
-margin_bottom = 563.0
+layout_mode = 2
+offset_left = 566.0
+offset_top = 378.0
+offset_right = 750.0
+offset_bottom = 562.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile12"]
-margin_right = 187.0
-margin_bottom = 187.0
+layout_mode = 2
+offset_right = 184.0
+offset_bottom = 184.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile12"]
-margin_right = 187.0
-margin_bottom = 187.0
+layout_mode = 2
+offset_right = 184.0
+offset_bottom = 184.0
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile12/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 43.0
+offset_top = 27.0
+offset_right = 140.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile13" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_top = 563.0
-margin_right = 188.0
-margin_bottom = 750.0
+layout_mode = 2
+offset_top = 566.0
+offset_right = 185.0
+offset_bottom = 750.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile13"]
-margin_top = -0.5
-margin_right = 188.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = -0.5
+offset_right = 185.0
+offset_bottom = 184.5
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile13"]
-margin_top = -0.5
-margin_right = 188.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = -0.5
+offset_right = 185.0
+offset_bottom = 184.5
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile13/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 44.0
+offset_top = 27.0
+offset_right = 141.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile14" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_left = 188.0
-margin_top = 563.0
-margin_right = 376.0
-margin_bottom = 750.0
+layout_mode = 2
+offset_left = 189.0
+offset_top = 566.0
+offset_right = 374.0
+offset_bottom = 750.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile14"]
-margin_top = -0.5
-margin_right = 188.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = -0.5
+offset_right = 185.0
+offset_bottom = 184.5
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile14"]
-margin_top = -0.5
-margin_right = 188.0
-margin_bottom = 187.5
+layout_mode = 2
+offset_top = -0.5
+offset_right = 185.0
+offset_bottom = 184.5
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile14/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 44.0
+offset_top = 27.0
+offset_right = 141.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile15" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_left = 376.0
-margin_top = 563.0
-margin_right = 563.0
-margin_bottom = 750.0
+layout_mode = 2
+offset_left = 378.0
+offset_top = 566.0
+offset_right = 562.0
+offset_bottom = 750.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile15"]
-margin_right = 187.0
-margin_bottom = 187.0
+layout_mode = 2
+offset_right = 184.0
+offset_bottom = 184.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile15"]
-margin_right = 187.0
-margin_bottom = 187.0
+layout_mode = 2
+offset_right = 184.0
+offset_bottom = 184.0
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile15/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 43.0
+offset_top = 27.0
+offset_right = 140.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="Tile16" type="AspectRatioContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer"]
-margin_left = 563.0
-margin_top = 563.0
-margin_right = 750.0
-margin_bottom = 750.0
+layout_mode = 2
+offset_left = 566.0
+offset_top = 566.0
+offset_right = 750.0
+offset_bottom = 750.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch_mode = 0
 
 [node name="Background" type="ColorRect" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile16"]
-margin_right = 187.0
-margin_bottom = 187.0
+layout_mode = 2
+offset_right = 184.0
+offset_bottom = 184.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile16"]
-margin_right = 187.0
-margin_bottom = 187.0
+layout_mode = 2
+offset_right = 184.0
+offset_bottom = 184.0
 
 [node name="Label" type="Label" parent="VBoxContainer/AspectRatioContainer/GridContainer/Tile16/CenterContainer"]
-margin_left = 33.0
-margin_top = 14.0
-margin_right = 154.0
-margin_bottom = 173.0
-theme = SubResource( 1 )
-custom_fonts/font = ExtResource( 3 )
+layout_mode = 2
+offset_left = 43.0
+offset_top = 27.0
+offset_right = 140.0
+offset_bottom = 157.0
+theme = SubResource("1")
+theme_override_font_sizes/font_size = 100
 text = "W"
 uppercase = true
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
-margin_top = 1295.0
-margin_right = 750.0
-margin_bottom = 1334.0
+layout_mode = 2
+offset_top = 1279.0
+offset_right = 750.0
+offset_bottom = 1334.0
 
 [node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
-margin_left = 169.0
-margin_right = 581.0
-margin_bottom = 39.0
+layout_mode = 2
+offset_left = 103.0
+offset_right = 646.0
+offset_bottom = 55.0
 text = "Drag your finger to make words"

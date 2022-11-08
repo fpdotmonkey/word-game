@@ -1,7 +1,8 @@
-[gd_resource type="Theme" load_steps=2 format=2]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://uq86cmg3my4h"]
 
-[ext_resource path="res://resources/cmunbsr.tres" type="DynamicFont" id=1]
+[ext_resource type="FontFile" uid="uid://6dg4chnht8l4" path="res://resources/cmunbsr.tres" id="1"]
 
 [resource]
-default_font = ExtResource( 1 )
-Label/colors/font_color = Color( 0, 0, 0, 1 )
+default_font = ExtResource("1")
+default_font_size = 40
+Label/colors/font_color = Color(0, 0, 0, 1)

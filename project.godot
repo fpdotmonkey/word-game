@@ -6,16 +6,19 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
+config_version=5
 
 [application]
 
 config/name="word-game"
 run/main_scene="res://Game View.tscn"
+config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
 [display]
 
+window/size/viewport_width=750
+window/size/viewport_height=1334
 window/size/width=750
 window/size/height=1334
 
